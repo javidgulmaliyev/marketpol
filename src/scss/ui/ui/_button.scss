@@ -1,0 +1,49 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.button {
+  --outline-color: var(--button-outline-color, currentColor);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap);
+  inline-size: var(--button-width);
+  min-inline-size: var(--button-min-width);
+  max-inline-size: var(--button-max-width);
+  min-block-size: var(--button-min-height);
+  padding-block: var(--button-padding-block, 5px);
+  padding-inline: var(--button-padding-inline);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  text-align: center;
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border: var(--button-border-width) solid var(--button-border-color, currentColor);
+  border-radius: var(--button-border-radius);
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color, border-color, var(--button-transition-property);
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    --button-color: var(--button-color-hover);
+    --button-background-color: var(--button-background-color-hover);
+    --button-border-color: var(--button-border-color-hover);
+  }
+
+  // .button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .button__text
+  &__text {
+  }
+}

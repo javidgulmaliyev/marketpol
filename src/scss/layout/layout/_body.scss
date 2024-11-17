@@ -1,0 +1,13 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+body {
+  font-family: variables.$font-primary;
+  line-height: 1.6;
+  color: variables.$color-primary;
+
+  .scroll-lock & {
+    overflow: hidden;
+  }
+}
