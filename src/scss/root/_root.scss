@@ -7,8 +7,8 @@
   --font-stolzl: "Stolzl", sans-serif;
   --font-stolzl-book: "Stolzl Book", sans-serif;
 
-  --primary-font: variables.$font-stolzl-book;
-  --text-font: variables.$font-stolzl;
+  --primary-font: #{variables.$font-stolzl-book};
+  --text-font: #{variables.$font-stolzl};
 
   // Colors
   --color-white: #fff;
@@ -33,24 +33,24 @@
 
   --color-white-alpha-60: rgba(255, 255, 255, 0.6);
 
-  --primary-color: variables.$color-1c1a18;
-  --active-color: variables.$color-9e8b69;
-  --active-color-2: variables.$color-c6bba7;
-  --accent-color: variables.$color-716b5f;
-  --accent-color-2: variables.$color-f6f5f2;
-  --accent-color-3: variables.$color-dad3c6;
-  --label-color: variables.$color-73716b;
-  --text-color: variables.$color-181818;
+  --primary-color: #{variables.$color-1c1a18};
+  --active-color: #{variables.$color-9e8b69};
+  --active-color-2: #{variables.$color-c6bba7};
+  --accent-color: #{variables.$color-716b5f};
+  --accent-color-2: #{variables.$color-f6f5f2};
+  --accent-color-3: #{variables.$color-dad3c6};
+  --label-color: #{variables.$color-73716b};
+  --text-color: #{variables.$color-181818};
 
-  --header-background-color: variables.$color-b2a388;
-  --footer-text-color: variables.$color-white-alpha-60;
-  --section-background-color: variables.$color-eeebe5;
-  --breadcrumbs-active-color: variables.$color-9b9383;
-  --tab-color: variables.$color-999999;
-  --tab-active-color: variables.$color-1d1d1d;
+  --header-background-color: #{variables.$color-b2a388};
+  --footer-text-color: #{variables.$color-white-alpha-60};
+  --section-background-color: #{variables.$color-eeebe5};
+  --breadcrumbs-active-color: #{variables.$color-9b9383};
+  --tab-color: #{variables.$color-999999};
+  --tab-active-color: #{variables.$color-1d1d1d};
 
-  --logo-icon-main-color: variables.$font-primary;
-  --logo-icon-line-color: variables.$color-f5b430;
-  --counter-icon-color: variables.$color-46433b;
-  --arrow-icon-color: variables.$color-fbfaf8;
+  --logo-icon-main-color: #{variables.$font-primary};
+  --logo-icon-line-color: #{variables.$color-f5b430};
+  --counter-icon-color: #{variables.$color-46433b};
+  --arrow-icon-color: #{variables.$color-fbfaf8};
 }
