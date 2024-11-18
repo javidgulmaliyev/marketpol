@@ -45,9 +45,6 @@
           </div>
           <div class="header-categories">
             <button class="header-categories__button catalog-button" data-burger="button" aria-label="Открыть каталог">
-              <script>
-                if (matchMedia("(max-width: 992px)").matches) document.querySelector(".catalog-button")?.setAttribute("data-burger", "open");
-              </script>
               <span class="catalog-button__icon" aria-hidden="true">
                 <svg width="16" height="16">
                   <use xlink:href="#icon-catalog"></use>
@@ -180,7 +177,7 @@
               </svg>
             </span>
           </a>
-          <button class="header-catalog__close" data-burger="close" aria-label="Закрыть каталог"></button>
+          <button class="header-catalog__close" aria-label="Закрыть каталог"></button>
         </div>
         <nav class="header-catalog__nav catalog-nav" aria-label="Каталог">
           <div class="catalog-nav__spoilers"></div>

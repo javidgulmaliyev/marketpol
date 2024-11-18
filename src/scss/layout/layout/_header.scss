@@ -374,6 +374,16 @@
   align-items: center;
   gap: 4px;
 
+  .burger-active & {
+    color: variables.$color-active;
+
+    @media (min-width: #{385 + 0.1px}) {
+      &::after {
+        background-color: currentColor;
+      }
+    }
+  }
+
   @include mixins.prefers-reduced-motion {
     transition-property: color;
     transition-duration: 0.3s;
@@ -382,8 +392,10 @@
   @include mixins.hover {
     color: variables.$color-active;
 
-    &::after {
-      background-color: currentColor;
+    @media (min-width: #{385 + 0.1px}) {
+      &::after {
+        background-color: currentColor;
+      }
     }
   }
 
