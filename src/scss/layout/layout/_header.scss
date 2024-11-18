@@ -665,6 +665,7 @@
 
     .scrolled & {
       inset-block-start: calc(#{variables.$header-height} - 60px);
+      max-block-size: calc(100% - 80px);
     }
   }
 
