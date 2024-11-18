@@ -1,0 +1,123 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.collection {
+  padding-block: functions.responsive-value(80, 40) functions.responsive-value(100, 80);
+  font-family: variables.$font-text;
+  color: variables.$font-text;
+
+  // .collection__container
+  &__container {
+  }
+
+  // .collection__title
+  &__title {
+    margin-block-end: functions.responsive-value(24, 16);
+  }
+
+  // .collection__inner
+  &__inner {
+    display: grid;
+    row-gap: functions.responsive-value(26, 24);
+    column-gap: functions.responsive-value(40, 24);
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 992px) {
+        grid-template-rows: auto 1fr;
+        align-items: start;
+      }
+    }
+
+    @media (min-width: #{992 + 0.1px}) {
+      grid-template-columns: 1fr 400px;
+    }
+  }
+
+  // .collection__text
+  &__text {
+    @media (min-width: #{76 + 0.1px}) {
+      @media (max-width: 992px) {
+        grid-row: span 2;
+      }
+    }
+
+    @media (min-width: #{992 + 0.1px}) {
+      align-self: center;
+    }
+
+    @media (max-width: 768px) {
+      order: 1;
+    }
+  }
+
+  // .collection__image
+  &__image {
+    aspect-ratio: 400 / 300;
+    font-size: 0;
+  }
+
+  // .collection__advantages
+  &__advantages {
+    @media (min-width: #{992 + 0.1px}) {
+      margin-inline-end: auto;
+    }
+  }
+}
+
+.collection-advantages {
+  padding: 16px;
+  line-height: 1.5;
+  background-color: variables.$color-accent-2;
+
+  @media (min-width: #{330 + 0.1px}) {
+    padding-block: 32px;
+    padding-inline: 40px;
+  }
+
+  @media (min-width: #{992 + 0.1px}) {
+    inline-size: 100%;
+    max-inline-size: 400px;
+  }
+
+  > *:last-child {
+    margin-block-end: 0;
+  }
+
+  // .collection-advantages__list
+  &__list {
+    margin-block-end: 24px;
+  }
+
+  // .collection-advantages__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:not(:last-child) {
+      margin-block-end: 4px;
+    }
+
+    @media (min-width: #{330 + 0.1px}) {
+      gap: 16px;
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 auto;
+      inline-size: 4px;
+      aspect-ratio: 1 / 1;
+      font-size: 0;
+      background-color: variables.$color-header-background;
+      pointer-events: none;
+    }
+  }
+
+  // .collection-advantages__link
+  &__link {
+    inline-size: fit-content;
+  }
+}
