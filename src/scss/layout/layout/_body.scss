@@ -10,4 +10,22 @@ body {
   .scroll-lock & {
     overflow: hidden;
   }
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background-color: rgba($color: #1c1a18, $alpha: 0.5);
+
+    html:not(.scroll-lock) & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: opacity, visibility;
+      transition-duration: 0.3s;
+    }
+  }
 }

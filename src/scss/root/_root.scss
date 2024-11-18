@@ -49,7 +49,7 @@
   --tab-color: #{variables.$color-999999};
   --tab-active-color: #{variables.$color-1d1d1d};
 
-  --logo-icon-main-color: #{variables.$font-primary};
+  --logo-icon-main-color: currentColor;
   --logo-icon-line-color: #{variables.$color-f5b430};
   --counter-icon-color: #{variables.$color-46433b};
   --arrow-icon-color: #{variables.$color-fbfaf8};

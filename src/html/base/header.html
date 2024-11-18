@@ -1,0 +1,250 @@
+<header class="header" id="header" data-header="header" data-burger="wrapper">
+  <div class="header__wrapper" data-header="wrapper" data-fixed>
+    <div class="header-top">
+      <div class="header-top__container container">
+        <div class="header-top__inner">
+          <div class="header-top__actions">
+            <div class="header-top__logo"></div>
+            <div class="header-tel">
+              <a class="header-tel__link" href="tel:+74954879232">+7 (495) 487- 92-32</a>
+            </div>
+            <button class="burger-button">
+              <span class="burger-button__line burger-button__line--top"></span>
+              <span class="burger-button__line burger-button__line--center"></span>
+              <span class="burger-button__line burger-button__line--bottom"></span>
+            </button>
+          </div>
+          <nav class="header-top__nav header-nav" aria-label="Главная навигация">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">О нас</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Услуги</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main__container container">
+        <div class="header-main__inner">
+          <div class="header-logo">
+            <a class="header-logo__icon" href="#" aria-label="Логотип">
+              <svg width="100%" height="100%" aria-hidden="true">
+                <use xlink:href="#icon-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header-categories">
+            <button class="header-categories__button catalog-button" data-burger="button" aria-label="Открыть каталог">
+              <script>
+                if (matchMedia("(max-width: 992px)").matches) document.querySelector(".catalog-button")?.setAttribute("data-burger", "open");
+              </script>
+              <span class="catalog-button__icon" aria-hidden="true">
+                <svg width="16" height="16">
+                  <use xlink:href="#icon-catalog"></use>
+                </svg>
+              </span>
+              <span class="catalog-button__text">каталог</span>
+            </button>
+            <nav class="header-categories__nav" aria-label="Категории">
+              <ul class="header-spoilers" data-spoilers data-breakpoint="992" data-accordion="false">
+                <li class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">Линолеум</a>
+                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Линолеум">
+                      <span class="header-spoilers__icon" aria-hidden="true">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="header-spoilers__region" data-spoiler="region">
+                    <ul class="header-subcategories">
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">Ковролин</a>
+                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Ковролин">
+                      <span class="header-spoilers__icon" aria-hidden="true">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="header-spoilers__region" data-spoiler="region">
+                    <ul class="header-subcategories">
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">Искусственная трава</a>
+                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Искусственная трава">
+                      <span class="header-spoilers__icon" aria-hidden="true">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="header-spoilers__region" data-spoiler="region">
+                    <ul class="header-subcategories">
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                      <li class="header-subcategories__item">
+                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-main__actions">
+            <form class="header-main__search search-form" id="search-form" action="#">
+              <div class="search-form__inner">
+                <input class="search-form__input" id="search-form-input" name="search-form-input" type="search" inputmode="search" minlength="3"
+                  pattern="^[^\s][a-zA-Zа-яА-Я0-9ёЁüÜİÖöĞğIıƏəÇçŞş ,\.\-]{2,}$" placeholder="Искать на сайте" required>
+                <button class="search-form__button" type="submit" aria-label="Поиск">
+                  <svg width="100%" height="100%" aria-hidden="true">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div class="header-cart">
+              <a class="header-cart__link" href="#" aria-label="Корзина">
+                <svg width="100%" height="100%" aria-hidden="true">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-catalog" data-burger="menu">
+    <div class="header-catalog__container container">
+      <div class="header-catalog__inner">
+        <div class="header-catalog__top">
+          <a class="header-catalog__link button" href="#">
+            <span class="button__text">все категории</span>
+            <span class="button__icon" aria-hidden="true">
+              <svg width="16" height="16">
+                <use xlink:href="#icon-next"></use>
+              </svg>
+            </span>
+          </a>
+          <button class="header-catalog__close" data-burger="close" aria-label="Закрыть каталог"></button>
+        </div>
+        <nav class="header-catalog__nav catalog-nav" aria-label="Каталог">
+          <div class="catalog-nav__spoilers"></div>
+          <ul class="catalog-nav__list" style="--links-per-column: 7;">
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Ковролин</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Ковровая плитка</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Линолеум</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Искусственный газон</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Пробка</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Ламинат</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Паркетная доска</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">SPC плитка</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Виниловая плитка</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Грязезащита</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Аксессуары для напольных покрытий</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Щетинистые покрытия</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Плинтус и фурнитура</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Клей</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Подложка</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Ручной инструмент</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Спортивные резиновые покрытия</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Инструмент для укладки</a>
+            </li>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Покрытия из резиновой крошки</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
