@@ -1,0 +1,1 @@
+import "./sliders/objects.js";

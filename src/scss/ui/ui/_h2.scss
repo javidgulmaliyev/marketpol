@@ -1,0 +1,16 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.h2 {
+  font-family: variables.$font-text;
+  font-size: functions.responsive-value(28, 26);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: variables.$color-text;
+
+  // .h2--ls
+  &--ls {
+    letter-spacing: 0.02em;
+  }
+}
