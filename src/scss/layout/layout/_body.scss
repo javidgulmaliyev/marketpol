@@ -16,7 +16,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 50;
-    background-color: rgba($color: #1c1a18, $alpha: 0.5);
+    background-color: rgba($color: #1d1d1d, $alpha: 0.25);
 
     html:not(.scroll-lock) & {
       opacity: 0;
