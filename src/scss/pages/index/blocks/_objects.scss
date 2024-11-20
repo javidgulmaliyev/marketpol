@@ -4,7 +4,6 @@
 
 .objects {
   padding-block: functions.responsive-value(80, 40);
-  font-family: variables.$font-text;
 
   @media (min-width: #{620 + 0.1px}) {
     background-color: variables.$color-section-background;

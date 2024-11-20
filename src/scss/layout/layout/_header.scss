@@ -58,7 +58,6 @@
 
 .header {
   block-size: variables.$header-height;
-  font-family: variables.$font-stolzl;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -156,6 +155,10 @@
 }
 
 .header-nav {
+  @media (max-width: 992px) {
+    border-block-start: 1px solid variables.$color-active-2;
+  }
+
   // .header-nav__list
   &__list {
     display: flex;
@@ -646,6 +649,7 @@
   max-block-size: calc(100% - #{variables.$header-height});
   font-size: 14px;
   background-color: variables.$color-white;
+  border-block-start: 1px solid variables.$color-active-2;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;

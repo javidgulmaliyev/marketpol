@@ -3,7 +3,6 @@
 @use "../../variables/variables";
 
 .h2 {
-  font-family: variables.$font-text;
   font-size: functions.responsive-value(28, 26);
   line-height: 1.1;
   text-transform: uppercase;

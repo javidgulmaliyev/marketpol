@@ -4,8 +4,7 @@
 
 .collection {
   padding-block: functions.responsive-value(80, 40) functions.responsive-value(100, 80);
-  font-family: variables.$font-text;
-  color: variables.$font-text;
+  color: variables.$color-text;
 
   // .collection__container
   &__container {

@@ -5,10 +5,8 @@
 
   // Fonts
   --font-stolzl: "Stolzl", sans-serif;
-  --font-stolzl-book: "Stolzl Book", sans-serif;
 
-  --primary-font: #{variables.$font-stolzl-book};
-  --text-font: #{variables.$font-stolzl};
+  --primary-font: #{variables.$font-stolzl};
 
   // Colors
   --color-white: #fff;
