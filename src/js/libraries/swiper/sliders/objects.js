@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import { Keyboard, Navigation, Pagination, } from "swiper/modules";
 
+/** @type {HTMLDivElement} */
 const objectsSlider = document.querySelector(".objects-slider");
 
 if (objectsSlider) {

@@ -15,8 +15,14 @@
   justify-content: center;
   row-gap: 4px;
 
-  @media (min-width: #{620 + 0.1px}) {
-    justify-content: end;
+  &:not(&--center) {
+    @media (min-width: #{620 + 0.1px}) {
+      justify-content: end;
+    }
+  }
+
+  // .slider-pagination--center
+  &--center {
   }
 
   .swiper-pagination-bullet {

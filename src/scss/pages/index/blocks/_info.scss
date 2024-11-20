@@ -1,0 +1,23 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.info {
+  padding-block-end: 40px;
+
+  @media (min-width: #{620 + 0.1px}) {
+    padding-block-start: 40px;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    display: none;
+  }
+
+  // .info__container
+  &__container {
+  }
+
+  // .info__spoilers
+  &__spoilers {
+  }
+}
