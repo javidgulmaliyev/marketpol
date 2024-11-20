@@ -29,7 +29,9 @@ const scss = {
   ["scss-dev"]() {
     return _.gulp.src(config.path.src)
       .pipe(_.plumber(config.modules.plumber))
-      .pipe(_.gulpSass(_.sass)())
+      .pipe(_.gulpSass(_.sass)({
+        silenceDeprecations: ["import", "global-builtin", "legacy-js-api",],
+      }))
       .pipe(_.replace(/@img\//g, "../img/"))
       .pipe(_.rename(config.modules.rename))
       .pipe(_.gulp.dest(config.path.dest));
@@ -37,7 +39,9 @@ const scss = {
   ["scss-prod"]() {
     return _.gulp.src(config.path.src)
       .pipe(_.plumber(config.modules.plumber))
-      .pipe(_.gulpSass(_.sass)())
+      .pipe(_.gulpSass(_.sass)({
+        silenceDeprecations: ["import", "global-builtin", "legacy-js-api",],
+      }))
       .pipe(_.replace(/@img\//g, "../img/"))
       .pipe(_.webpcss(config.modules.webpcss))
       .pipe(_.autoPrefixer())
