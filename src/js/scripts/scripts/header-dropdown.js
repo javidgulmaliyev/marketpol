@@ -94,5 +94,7 @@ function hideSpoilerCatalog() {
     if (matches) spoilerButton.ariaExpanded = false;
 
     Scrolling.unlock();
+
+    if (documentElement.classList.contains("burger-active")) Scrolling.lock();
   }
 }
