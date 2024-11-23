@@ -3,6 +3,7 @@ import "./scripts/move.js";
 import "./scripts/header-nav.js";
 import "./scripts/burger.js";
 import "./scripts/burger-close.js";
+import "./scripts/product-images.js";
 import "./scripts/spoilers.js";
 import "./scripts/copy.js";
 import "./scripts/tabs.js";
