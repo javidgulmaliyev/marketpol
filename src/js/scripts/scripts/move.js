@@ -1,5 +1,32 @@
 import { Move } from "../../modules/move.js";
 
+/** @type {HTMLFormElement} */
+const searchFormMain = document.querySelector(".search-form");
+/** @type {HTMLDivElement} */
+const searchFormContainer = document.querySelector(".header-main__actions");
+
+if (searchFormMain && searchFormContainer) {
+  const move = new Move({
+    breakpoint: 992,
+    destinationSelector: ".header-main__actions",
+    targetSelector: ".search-form",
+    index: "first",
+  });
+}
+
+/** @type {HTMLDivElement} */
+const cartLinkMain = document.querySelector(".header-cart");
+/** @type {HTMLDivElement} */
+const cartLinkContainer = document.querySelector(".header-main__actions");
+
+if (cartLinkMain && cartLinkContainer) {
+  const move = new Move({
+    breakpoint: 992,
+    destinationSelector: ".header-main__actions",
+    targetSelector: ".header-cart",
+  });
+}
+
 /** @type {HTMLDivElement} */
 const headerLogoMain = document.querySelector(".header-logo");
 /** @type {HTMLDivElement} */
@@ -16,13 +43,14 @@ if (headerLogoMain && headerLogoContainer) {
 /** @type {HTMLUListElement} */
 const headerSpoilersMain = document.querySelector(".header-spoilers");
 /** @type {HTMLDivElement} */
-const headerSpoilersContainer = document.querySelector(".catalog-nav__spoilers");
+const headerSpoilersContainer = document.querySelector(".header-catalog__nav");
 
 if (headerSpoilersMain && headerSpoilersContainer) {
   const move = new Move({
     breakpoint: 992,
-    destinationSelector: ".catalog-nav__spoilers",
+    destinationSelector: ".header-catalog__nav",
     targetSelector: ".header-spoilers",
+    index: "first",
   });
 }
 

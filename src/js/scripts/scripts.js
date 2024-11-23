@@ -5,6 +5,7 @@ import "./scripts/burger.js";
 import "./scripts/burger-close.js";
 import "./scripts/product-images.js";
 import "./scripts/spoilers.js";
+import "./scripts/header-dropdown.js";
 import "./scripts/copy.js";
 import "./scripts/tabs.js";
 import "./scripts/calc.js";

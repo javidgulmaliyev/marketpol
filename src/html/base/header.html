@@ -3,10 +3,28 @@
     <div class="header-top">
       <div class="header-top__container container">
         <div class="header-top__inner">
+          <form class="search-form" id="search-form" action="#">
+            <div class="search-form__inner">
+              <input class="search-form__input" id="search-form-input" name="search-form-input" type="search" inputmode="search" minlength="3"
+                pattern="^[^\s][a-zA-Zа-яА-Я0-9ёЁüÜİÖöĞğIıƏəÇçŞş ,\.\-]{2,}$" placeholder="Искать на сайте" required>
+              <button class="search-form__button" type="submit" aria-label="Поиск">
+                <svg width="100%" height="100%" aria-hidden="true">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
           <div class="header-top__actions">
             <div class="header-top__logo"></div>
             <div class="header-tel">
               <a class="header-tel__link" href="tel:+74954879232">+7 (495) 487- 92-32</a>
+            </div>
+            <div class="header-cart">
+              <a class="header-cart__link" href="#" aria-label="Корзина">
+                <svg width="100%" height="100%" aria-hidden="true">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
             </div>
             <button class="burger-button" aria-label="Открыть главную навигацию">
               <span class="burger-button__line burger-button__line--top"></span>
@@ -53,11 +71,11 @@
               <span class="catalog-button__text">каталог</span>
             </button>
             <nav class="header-categories__nav" aria-label="Категории">
-              <ul class="header-spoilers" data-spoilers data-breakpoint="992" data-accordion="false">
-                <li class="header-spoilers__item">
+              <div class="header-spoilers" data-spoilers data-breakpoint="992" data-accordion="false">
+                <div class="header-spoilers__item">
                   <div class="header-spoilers__title">
-                    <a class="header-spoilers__label" href="#">Линолеум</a>
-                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Линолеум">
+                    <button class="header-spoilers__button" data-spoiler="button">
+                      <span class="header-spoilers__label">Ковролин</span>
                       <span class="header-spoilers__icon" aria-hidden="true">
                         <svg width="16" height="16">
                           <use xlink:href="#icon-down"></use>
@@ -66,26 +84,126 @@
                     </button>
                   </div>
                   <div class="header-spoilers__region" data-spoiler="region" hidden>
-                    <ul class="header-subcategories">
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                    </ul>
+                    <div class="spoiler-catalog">
+                      <div class="spoiler-catalog__container container">
+                        <div class="spoiler-catalog__inner">
+                          <div class="spoiler-catalog__top">
+                            <a class="spoiler-catalog__link button" href="#">
+                              <span class="button__text">весь ковролин</span>
+                              <span class="button__icon" aria-hidden="true">
+                                <svg width="16" height="16">
+                                  <use xlink:href="#icon-next"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                          <div class="spoiler-catalog__nav catalog-nav" aria-label="Каталог">
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Назначение</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Бытовой</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Для офиса</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Коммерческий</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Выставочный</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Производители</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Tarkett</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Levma</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Domo</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Ideal</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Betap</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Haima</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">ITC</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Цвета</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Красный</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Зеленый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Синий</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Желтый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Серый </a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Коричневый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Черный</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Бежевый</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </li>
-                <li class="header-spoilers__item">
+                </div>
+                <div class="header-spoilers__item">
                   <div class="header-spoilers__title">
-                    <a class="header-spoilers__label" href="#">Ковролин</a>
-                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Ковролин">
+                    <button class="header-spoilers__button" data-spoiler="button">
+                      <span class="header-spoilers__label">Линолеум</span>
                       <span class="header-spoilers__icon" aria-hidden="true">
                         <svg width="16" height="16">
                           <use xlink:href="#icon-down"></use>
@@ -94,73 +212,146 @@
                     </button>
                   </div>
                   <div class="header-spoilers__region" data-spoiler="region" hidden>
-                    <ul class="header-subcategories">
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                    </ul>
+                    <div class="spoiler-catalog">
+                      <div class="spoiler-catalog__container container">
+                        <div class="spoiler-catalog__inner">
+                          <div class="spoiler-catalog__top">
+                            <a class="spoiler-catalog__link button" href="#">
+                              <span class="button__text">весь Линолеум</span>
+                              <span class="button__icon" aria-hidden="true">
+                                <svg width="16" height="16">
+                                  <use xlink:href="#icon-next"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                          <div class="spoiler-catalog__nav catalog-nav" aria-label="Каталог">
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Назначение</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Бытовой</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Бытовой усиленный</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Коммерческий</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Полукоммерческий</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Спортивный</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Производители</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Tarkett</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Комитекс</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Juteks</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Ideal</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Sinteros</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Grabo</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Forbo</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="catalog-nav__inner">
+                              <div class="catalog-nav__label">Цвета</div>
+                              <div class="catalog-nav__list">
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Синий</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Зеленый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Красный</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Серый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Желтый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Коричневый</a>
+                                </div>
+                                <div class="catalog-nav__item">
+                                  <a class="catalog-nav__link" href="#">Черный</a>
+                                </div>
+                              </div>
+                              <a class="nav-more" href="#">
+                                <span class="nav-more__text">Смотреть все</span>
+                                <span class="nav-more__icon" aria-hidden="true">
+                                  <svg width="16" height="16">
+                                    <use xlink:href="#icon-next"></use>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </li>
-                <li class="header-spoilers__item">
+                </div>
+                <div class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">Ламинат</a>
+                  </div>
+                </div>
+                <div class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">SPC плитка</a>
+                  </div>
+                </div>
+                <div class="header-spoilers__item">
                   <div class="header-spoilers__title">
                     <a class="header-spoilers__label" href="#">Искусственная трава</a>
-                    <button class="header-spoilers__button" data-spoiler="button" aria-label="Искусственная трава">
-                      <span class="header-spoilers__icon" aria-hidden="true">
-                        <svg width="16" height="16">
-                          <use xlink:href="#icon-down"></use>
-                        </svg>
-                      </span>
-                    </button>
                   </div>
-                  <div class="header-spoilers__region" data-spoiler="region" hidden>
-                    <ul class="header-subcategories">
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                      <li class="header-subcategories__item">
-                        <a class="header-subcategories__link" href="#">Lorem ipsum dolor</a>
-                      </li>
-                    </ul>
+                </div>
+                <div class="header-spoilers__item">
+                  <div class="header-spoilers__title">
+                    <a class="header-spoilers__label" href="#">Грязезащита</a>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </nav>
           </div>
-          <div class="header-main__actions">
-            <form class="header-main__search search-form" id="search-form" action="#">
-              <div class="search-form__inner">
-                <input class="search-form__input" id="search-form-input" name="search-form-input" type="search" inputmode="search" minlength="3"
-                  pattern="^[^\s][a-zA-Zа-яА-Я0-9ёЁüÜİÖöĞğIıƏəÇçŞş ,\.\-]{2,}$" placeholder="Искать на сайте" required>
-                <button class="search-form__button" type="submit" aria-label="Поиск">
-                  <svg width="100%" height="100%" aria-hidden="true">
-                    <use xlink:href="#icon-search"></use>
-                  </svg>
-                </button>
-              </div>
-            </form>
-            <div class="header-cart">
-              <a class="header-cart__link" href="#" aria-label="Корзина">
-                <svg width="100%" height="100%" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
+          <div class="header-main__actions"></div>
         </div>
       </div>
     </div>
@@ -180,66 +371,75 @@
           <button class="header-catalog__close" aria-label="Закрыть каталог"></button>
         </div>
         <nav class="header-catalog__nav catalog-nav" aria-label="Каталог">
-          <div class="catalog-nav__spoilers"></div>
-          <ul class="catalog-nav__list" style="--links-per-column: 7;">
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Ковролин</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Ковровая плитка</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Линолеум</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Искусственный газон</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Пробка</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Ламинат</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Паркетная доска</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">SPC плитка</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Виниловая плитка</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Грязезащита</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Аксессуары для напольных покрытий</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Щетинистые покрытия</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Плинтус и фурнитура</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Клей</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Подложка</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Ручной инструмент</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Спортивные резиновые покрытия</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Инструмент для укладки</a>
-            </li>
-            <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Покрытия из резиновой крошки</a>
-            </li>
-          </ul>
+          <div class="catalog-nav__inner">
+            <div class="catalog-nav__list">
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Ковролин</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Ковровая плитка</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Линолеум</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Искусственный газон</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Пробка</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Ламинат</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Паркетная доска</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-nav__inner">
+            <div class="catalog-nav__list">
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">SPC плитка</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Виниловая плитка</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Грязезащита</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Аксессуары для напольных покрытий</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Щетинистые покрытия</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Плинтус и фурнитура</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Клей</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-nav__inner">
+            <div class="catalog-nav__list">
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Подложка</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Ручной инструмент</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Спортивные резиновые покрытия</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Инструмент для укладки</a>
+              </div>
+              <div class="catalog-nav__item">
+                <a class="catalog-nav__link" href="#">Покрытия из резиновой крошки</a>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
