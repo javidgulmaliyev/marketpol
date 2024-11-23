@@ -286,6 +286,47 @@
   }
 }
 
+.certificates {
+  // .certificates__item
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: 10px;
+    }
+  }
+
+  // .certificates__link
+  &__link {
+  }
+}
+
+.certificate-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  inline-size: fit-content;
+  padding-block: 5px;
+  text-align: start;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-active;
+  }
+
+  // .certificate-link__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .certificate-link__text
+  &__text {
+  }
+}
+
 .product-content {
   container-type: inline-size;
 
