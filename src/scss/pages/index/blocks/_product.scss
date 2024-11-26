@@ -716,11 +716,6 @@
   padding-block-end: 32px;
   font-size: 0;
 
-  &:has(.product-radio__input:focus-visible) {
-    outline: 2px solid;
-    outline-offset: 2px;
-  }
-
   // .product-radios__item
   &__item {
     flex: 0 0 auto;
@@ -729,6 +724,20 @@
 
 .product-radio {
   position: relative;
+
+  &:has(.product-radio__icon--active) {
+    &::after {
+      background-color: currentColor;
+    }
+  }
+
+  @media (hover: hover) {
+    &:has(.product-radio__icon:hover) {
+      &::after {
+        background-color: currentColor;
+      }
+    }
+  }
 
   &::after {
     content: "";
@@ -744,29 +753,19 @@
     }
   }
 
-  &:has(.product-radio__input:checked) {
-    &::after {
-      background-color: currentColor;
-    }
-  }
-
-  // .product-radio__label
-  &__label {
-  }
-
   // .product-radio__icon
   &__icon {
     display: block;
     inline-size: 30px;
     aspect-ratio: 1 / 1;
 
+    // .product-radio__icon--active
+    &--active {
+    }
+
     @media (min-width: #{350 + 0.1px}) {
       inline-size: 48px;
     }
-  }
-
-  // .product-radio__input
-  &__input {
   }
 }
 
