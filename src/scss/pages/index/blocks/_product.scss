@@ -889,6 +889,7 @@
 }
 
 .counter {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -907,24 +908,31 @@
     transition-duration: 0.3s;
   }
 
-  // .counter__button
-  &__button {
-    flex: 0 0 auto;
-    font-size: 0;
-
-    @include mixins.prefers-reduced-motion {
-      transition-property: color;
-      transition-duration: 0.3s;
-    }
-
-    @include mixins.hover {
-      color: variables.$color-active;
-    }
-  }
-
-  // .counter__input
-  &__input {
+  // .counter__select
+  &__select {
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    display: block;
+    align-content: center;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
     text-align: inherit;
+    white-space: inherit;
+    vertical-align: middle;
+    color: inherit;
+    background: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%2346433B' stroke-width='1.6' d='M12.24 6.74 8 11 3.76 6.74'/%3E%3C/svg%3E%0A");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    outline: none;
+    cursor: pointer;
   }
 
   // .counter__output

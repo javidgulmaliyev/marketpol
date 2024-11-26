@@ -359,47 +359,37 @@
               </div>
               <div class="product-calc__panels">
                 <div class="product-calc__panel" data-panel="cut">
-                  <div class="product-calc__counters product-counters" data-calc>
+                  <div class="product-calc__counters product-counters">
                     <div class="product-counters__item">
-                      <label class="product-counters__label" for="counter-number-1">Ширина рулона</label>
-                      <div class="product-counters__inner counter" data-counter>
-                        <button class="counter__button" type="button" data-minus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-down"></use>
-                          </svg>
-                        </button>
-                        <input class="counter__input" id="counter-number-1" name="counter-number-1" type="text" inputmode="decimal" value="2 м" max="10" min="1" step="1" required data-input
-                          data-unit="м">
-                        <button class="counter__button" type="button" data-plus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-up"></use>
-                          </svg>
-                        </button>
+                      <label class="product-counters__label" for="counter-select-1">Ширина рулона</label>
+                      <div class="product-counters__inner counter">
+                        <select class="counter__select" id="counter-select-1" name="counter-select-1">
+                          <option value="1 м" selected>1 м</option>
+                          <option value="2 м">2 м</option>
+                          <option value="3 м">3 м</option>
+                          <option value="4 м">4 м</option>
+                          <option value="5 м">5 м</option>
+                        </select>
                       </div>
                     </div>
                     <div class="product-counters__symbol">*</div>
                     <div class="product-counters__item">
-                      <label class="product-counters__label" for="counter-number-2">Длина отреза</label>
-                      <div class="product-counters__inner counter" data-counter>
-                        <button class="counter__button" type="button" data-minus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-down"></use>
-                          </svg>
-                        </button>
-                        <input class="counter__input" id="counter-number-2" name="counter-number-2" type="text" inputmode="decimal" value="10 м" max="100" min="10" step="10" required data-input
-                          data-unit="м">
-                        <button class="counter__button" type="button" data-plus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-up"></use>
-                          </svg>
-                        </button>
+                      <label class="product-counters__label" for="counter-select-2">Длина отреза</label>
+                      <div class="product-counters__inner counter">
+                        <select class="counter__select" id="counter-select-2" name="counter-select-2">
+                          <option value="1 м" selected>1 м</option>
+                          <option value="2 м">2 м</option>
+                          <option value="3 м">3 м</option>
+                          <option value="4 м">4 м</option>
+                          <option value="5 м">5 м</option>
+                        </select>
                       </div>
                     </div>
                     <div class="product-counters__symbol product-counters__symbol--row">=</div>
                     <div class="product-counters__item product-counters__item--row">
                       <div class="product-counters__label">Общая площадь</div>
                       <div class="product-counters__inner counter">
-                        <div class="counter__output" data-output data-unit="м²">20 м²</div>
+                        <div class="counter__output" data-unit="м²">20 м²</div>
                       </div>
                     </div>
                   </div>
@@ -418,46 +408,37 @@
                   </div>
                 </div>
                 <div class="product-calc__panel" data-panel="roll" hidden>
-                  <div class="product-calc__counters product-counters" data-calc>
+                  <div class="product-calc__counters product-counters">
                     <div class="product-counters__item">
-                      <label class="product-counters__label" for="counter-number-3">Ширина рулона</label>
-                      <div class="product-counters__inner counter" data-counter>
-                        <button class="counter__button" type="button" data-minus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-down"></use>
-                          </svg>
-                        </button>
-                        <input class="counter__input" id="counter-number-3" name="counter-number-3" type="text" inputmode="decimal" value="2.5 м" max="10" min="0.5" step="0.5" required data-input
-                          data-unit="м">
-                        <button class="counter__button" type="button" data-plus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-up"></use>
-                          </svg>
-                        </button>
+                      <label class="product-counters__label" for="counter-select-3">Ширина рулона</label>
+                      <div class="product-counters__inner counter">
+                        <select class="counter__select" id="counter-select-3" name="counter-select-3">
+                          <option value="1 м" selected>1 м</option>
+                          <option value="2 м">2 м</option>
+                          <option value="3 м">3 м</option>
+                          <option value="4 м">4 м</option>
+                          <option value="5 м">5 м</option>
+                        </select>
                       </div>
                     </div>
                     <div class="product-counters__symbol">*</div>
                     <div class="product-counters__item">
-                      <label class="product-counters__label" for="counter-number-4">Кол-во рулонов</label>
-                      <div class="product-counters__inner counter" data-counter>
-                        <button class="counter__button" type="button" data-minus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-down"></use>
-                          </svg>
-                        </button>
-                        <input class="counter__input" id="counter-number-4" name="counter-number-4" type="number" inputmode="decimal" value="2" max="10" min="1" step="1" required data-input>
-                        <button class="counter__button" type="button" data-plus aria-label="#">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#icon-up"></use>
-                          </svg>
-                        </button>
+                      <label class="product-counters__label" for="counter-select-4">Кол-во рулонов</label>
+                      <div class="product-counters__inner counter">
+                        <select class="counter__select" id="counter-select-4" name="counter-select-4">
+                          <option value="1 м" selected>1 м</option>
+                          <option value="2 м">2 м</option>
+                          <option value="3 м">3 м</option>
+                          <option value="4 м">4 м</option>
+                          <option value="5 м">5 м</option>
+                        </select>
                       </div>
                     </div>
                     <div class="product-counters__symbol product-counters__symbol--row">=</div>
                     <div class="product-counters__item product-counters__item--row">
                       <div class="product-counters__label">Общая площадь</div>
                       <div class="product-counters__inner counter">
-                        <div class="counter__output" data-output data-unit="м²">20 м²</div>
+                        <div class="counter__output" data-unit="м²">20 м²</div>
                       </div>
                     </div>
                   </div>
