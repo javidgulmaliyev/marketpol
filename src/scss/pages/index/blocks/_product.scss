@@ -486,11 +486,38 @@
   display: grid;
   grid-template-columns: calc(100cqi - 36px) 1fr;
 
+  @media (min-width: #{768 + 0.1px}) {
+    &:not(:has(.purpose-slider:nth-child(2))) {
+      grid-template-columns: auto calc(100cqi - 72px) auto;
+
+      &:has(.purposes-arrows__button.swiper-button-disabled) {
+        grid-template-columns: auto calc(100cqi - 36px) auto;
+      }
+
+      &:has(.purposes-arrows__button--prev.swiper-button-disabled):has(
+          .purposes-arrows__button--next.swiper-button-disabled
+        ) {
+        grid-template-columns: auto 100cqi auto;
+      }
+
+      @include mixins.prefers-reduced-motion {
+        transition-property: grid-template-columns;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: auto calc(100cqi - 72px) auto;
 
     &:has(.purposes-arrows__button.swiper-button-disabled) {
       grid-template-columns: auto calc(100cqi - 36px) auto;
+    }
+
+    &:has(.purposes-arrows__button--prev.swiper-button-disabled):has(
+        .purposes-arrows__button--next.swiper-button-disabled
+      ) {
+      grid-template-columns: auto 100cqi auto;
     }
 
     @include mixins.prefers-reduced-motion {
@@ -523,23 +550,30 @@
     }
   }
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background-image: linear-gradient(
-      to var(--direction, right),
-      rgba($color: #f6f5f2, $alpha: 0) 80%,
-      rgba($color: #f6f5f2, $alpha: 0.9) 90%,
-      rgba($color: #f6f5f2, $alpha: 1)
-    );
-    pointer-events: none;
+  .product-purposes:not(
+      :has(.purposes-arrows__button--prev.swiper-button-disabled):has(
+          .purposes-arrows__button--next.swiper-button-disabled
+        )
+    )
+    &.purpose-slider--layer {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background-image: linear-gradient(
+        to var(--direction, right),
+        rgba($color: #f6f5f2, $alpha: 0) 80%,
+        rgba($color: #f6f5f2, $alpha: 0.9) 90%,
+        rgba($color: #f6f5f2, $alpha: 1)
+      );
+      pointer-events: none;
 
-    @include mixins.prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
+      @include mixins.prefers-reduced-motion {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+      }
     }
   }
 
@@ -618,6 +652,10 @@
     flex-direction: column;
     gap: 8px;
     font-size: 0;
+
+    .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+      display: contents;
+    }
   }
 
   // .purposes-arrows__button
@@ -642,6 +680,12 @@
     &.swiper-button-disabled {
       color: variables.$color-accent-3;
 
+      @media (min-width: #{768 + 0.1px}) {
+        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+          inline-size: 0;
+        }
+      }
+
       @media (max-width: 768px) {
         inline-size: 0;
       }
@@ -649,6 +693,12 @@
 
     // .purposes-arrows__button--prev
     &--prev {
+      @media (min-width: #{768 + 0.1px}) {
+        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+          order: -1;
+        }
+      }
+
       @media (max-width: 768px) {
         order: -1;
       }
@@ -656,6 +706,12 @@
 
     // .purposes-arrows__button--next
     &--next {
+      @media (min-width: #{768 + 0.1px}) {
+        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+          order: 1;
+        }
+      }
+
       @media (max-width: 768px) {
         order: 1;
       }
