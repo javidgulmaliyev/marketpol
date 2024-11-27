@@ -991,6 +991,26 @@
     cursor: pointer;
   }
 
+  // .counter__button
+  &__button {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-active;
+    }
+  }
+
+  // .counter__input
+  &__input {
+    text-align: inherit;
+  }
+
   // .counter__output
   &__output {
   }

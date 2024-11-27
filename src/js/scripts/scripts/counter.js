@@ -10,8 +10,6 @@ counters.forEach((counter) => {
   const minus = counter.querySelector("[data-minus]");
 
   if (input && plus && minus) {
-    const calcBlock = input.closest("[data-calc]");
-
     input.addEventListener("focus", () => {
       const { value } = input;
 
@@ -25,14 +23,6 @@ counters.forEach((counter) => {
       input.type = "text";
       input.value = unit ? `${value} ${unit}` : value;
     });
-
-    if (calcBlock) {
-      input.addEventListener("change", () => {
-        setTimeout(() => {
-          calcBlock.dispatchEvent(new Event("calc"));
-        });
-      });
-    }
 
     plus.addEventListener("click", () => {
       counterAction(input, "plus");

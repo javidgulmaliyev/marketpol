@@ -8,5 +8,5 @@ import "./scripts/spoilers.js";
 import "./scripts/header-dropdown.js";
 import "./scripts/copy.js";
 import "./scripts/tabs.js";
+import "./scripts/counter.js";
 // import "./scripts/calc.js";
-// import "./scripts/counter.js";
