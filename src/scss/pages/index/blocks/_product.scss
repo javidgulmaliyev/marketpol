@@ -487,7 +487,8 @@
   grid-template-columns: calc(100cqi - 36px) 1fr;
 
   @media (min-width: #{768 + 0.1px}) {
-    &:not(:has(.purpose-slider:nth-child(2))) {
+    &:not(:has(.purpose-slider:nth-child(1) .purpose-slider__slide:nth-child(1))),
+    &:not(:has(.purpose-slider:nth-child(2) .purpose-slider__slide:nth-child(1))) {
       grid-template-columns: auto calc(100cqi - 72px) auto;
 
       &:has(.purposes-arrows__button.swiper-button-disabled) {
@@ -543,6 +544,25 @@
 }
 
 .purpose-slider {
+  &:not(:has(.purpose-slider__slide:nth-child(1))) {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    outline-offset: 0;
+
+    > * {
+      display: none;
+    }
+  }
+
   // .purpose-slider--hide
   &--hide {
     @media (max-width: 768px) {
@@ -653,7 +673,8 @@
     gap: 8px;
     font-size: 0;
 
-    .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+    .product-purposes:not(:has(.purpose-slider:nth-child(1) .purpose-slider__slide:nth-child(1))) &,
+    .product-purposes:not(:has(.purpose-slider:nth-child(2) .purpose-slider__slide:nth-child(1))) & {
       display: contents;
     }
   }
@@ -681,7 +702,8 @@
       color: variables.$color-accent-3;
 
       @media (min-width: #{768 + 0.1px}) {
-        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+        .product-purposes:not(:has(.purpose-slider:nth-child(1) .purpose-slider__slide:nth-child(1))) &,
+        .product-purposes:not(:has(.purpose-slider:nth-child(2) .purpose-slider__slide:nth-child(1))) & {
           inline-size: 0;
         }
       }
@@ -694,7 +716,8 @@
     // .purposes-arrows__button--prev
     &--prev {
       @media (min-width: #{768 + 0.1px}) {
-        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+        .product-purposes:not(:has(.purpose-slider:nth-child(1) .purpose-slider__slide:nth-child(1))) &,
+        .product-purposes:not(:has(.purpose-slider:nth-child(2) .purpose-slider__slide:nth-child(1))) & {
           order: -1;
         }
       }
@@ -707,7 +730,8 @@
     // .purposes-arrows__button--next
     &--next {
       @media (min-width: #{768 + 0.1px}) {
-        .product-purposes:not(:has(.purpose-slider:nth-child(2))) & {
+        .product-purposes:not(:has(.purpose-slider:nth-child(1) .purpose-slider__slide:nth-child(1))) &,
+        .product-purposes:not(:has(.purpose-slider:nth-child(2) .purpose-slider__slide:nth-child(1))) & {
           order: 1;
         }
       }

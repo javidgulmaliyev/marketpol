@@ -42,7 +42,10 @@ function counterAction(input, action) {
   const { value, unit } = setNewValue(input, action);
 
   input.value = unit ? `${value} ${unit}` : value;
-  input.dispatchEvent(new Event("change"));
+
+  input.dispatchEvent(new Event("change", {
+    bubbles: true
+  }));
 }
 
 /**
@@ -54,6 +57,7 @@ function setNewValue(input, action) {
   const { dataset } = input;
   const { unit } = dataset;
 
+  /** @type {{ value: number, min: number, max: number, step: number }} */
   let { value, min, max, step } = input;
 
   value = parseFloat(value);
@@ -61,11 +65,20 @@ function setNewValue(input, action) {
   max = +max;
   step = +step;
 
+  const decimal = !Number.isInteger(step);
+
+  if (decimal) {
+    step *= 10;
+    value *= 10;
+  }
+
   if (action) {
     if (action === "plus") value += step;
     if (action === "minus") value -= step;
   }
 
+  if (decimal) value /= 10;
+  if (!Number.isInteger(value)) value = parseFloat(value.toFixed(1));
   if (value > max) value = max;
   if (value < min) value = min;
 

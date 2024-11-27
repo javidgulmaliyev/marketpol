@@ -30,6 +30,7 @@ const config = {
         },
         entry: {
           script: "./src/js/script.js",
+          libraries: "./src/js/libraries.js",
         },
         output: {
           filename: !isDev && !isMinimize ? "[name].js" : "[name].min.js",
