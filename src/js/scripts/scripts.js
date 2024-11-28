@@ -9,4 +9,4 @@ import "./scripts/header-dropdown.js";
 import "./scripts/copy.js";
 import "./scripts/tabs.js";
 import "./scripts/counter.js";
-// import "./scripts/calc.js";
+import "./scripts/dialogs.js";

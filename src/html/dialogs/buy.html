@@ -1,0 +1,23 @@
+<dialog class="buy" id="dialog-buy">
+  <div class="buy__inner" data-dialog="inner">
+    <div class="buy__header">
+      <h2 class="buy__title h2">Купить в один клик</h2>
+      <button class="buy__close" data-dialog="close" aria-label="Закрыть"></button>
+    </div>
+    <p class="buy__text">Заполните, пожалуйста, форму и наш менеджер свяжется с вами для подтверждения заказа.</p>
+    <form class="buy__form buy-form" id="buy-form" action="#">
+      <div class="buy-form__inputs buy-inputs">
+        <div class="buy-inputs__item">
+          <label class="buy-inputs__label" for="buy-inputs-name">Имя</label>
+          <input class="buy-inputs__input" id="buy-inputs-name" name="buy-inputs-name" type="text" inputmode="text" required>
+        </div>
+        <div class="buy-inputs__item">
+          <label class="buy-inputs__label" for="buy-inputs-tel">Телефон</label>
+          <input class="buy-inputs__input" id="buy-inputs-tel" name="buy-inputs-tel" type="tel" inputmode="tel" required>
+        </div>
+      </div>
+      <button class="buy-form__submit button">Купить</button>
+    </form>
+    <p class="buy__text">Нажимая кнопку "Купить", я даю согласие на обработку моих персональных данных в соответствии с&#32;<a href="#" target="_blank">политикой конфиденциальности</a></p>
+  </div>
+</dialog>

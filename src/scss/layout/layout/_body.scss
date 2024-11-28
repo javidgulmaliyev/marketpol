@@ -18,7 +18,8 @@ body {
     z-index: 50;
     background-color: rgba($color: #1d1d1d, $alpha: 0.25);
 
-    html:not(.scroll-lock) & {
+    html:not(.scroll-lock) &,
+    html.dialog-active & {
       opacity: 0;
       visibility: hidden;
     }
