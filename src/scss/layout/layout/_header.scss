@@ -795,6 +795,7 @@
 
   // .header-cart__link
   &__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -814,6 +815,24 @@
 
     @media (max-width: 992px) {
       @include header-main-hover;
+    }
+
+    &[data-count]:not([data-count="0"], [data-count=""], [data-count*="-"]) {
+      &::after {
+        content: attr(data-count);
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: 0;
+        z-index: 1;
+        font-size: 16px;
+        line-height: 1;
+        text-shadow: 0 0 5px variables.$color-white;
+        pointer-events: none;
+
+        @media (min-width: #{992 + 0.1px}) {
+          text-shadow: 0 0 5px variables.$color-primary;
+        }
+      }
     }
   }
 }
