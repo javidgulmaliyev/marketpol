@@ -1,0 +1,31 @@
+<section class="form form--color" aria-labelledby="section-form-sample">
+  <div class="form__container container">
+    <form class="form-inner" id="form-sample" action="#">
+      <div class="form-inner__content">
+        <div class="form-inner__header">
+          <h2 class="title-h2" id="section-form-sample">Доставим образцы</h2>
+          <p class="form-inner__text">Мы позвоним вам, уточним адрес и необходимые дизайны образцов, которые нужно отправить</p>
+        </div>
+        <div class="form-inner__inputs">
+          <div class="form-inner__input" data-desktop-placeholder="Введите имя: Иванов Иван *" data-mobile-placeholder="Имя *">
+            <input id="form-sample-name" name="form-sample-name" type="text" inputmode="text" placeholder="Введите имя" required aria-label="Введите имя">
+          </div>
+          <div class="form-inner__input" data-desktop-placeholder="Введите телефон:  +7 (000) 000- 00-00 *" data-mobile-placeholder="Телефон *">
+            <input id="form-sample-tel" name="form-sample-tel" type="tel" inputmode="tel" placeholder="Введите телефон" required aria-label="Введите телефон">
+          </div>
+        </div>
+        <button class="form-inner__button button" type="submit">
+          <span class="button__text">Заказать образцы</span>
+          <span class="button__icon" aria-hidden="true">
+            <svg width="16" height="16">
+              <use xlink:href="#icon-next"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="form-inner__image ibg">
+        <img src="@img/images/pages/carpet/form/1.jpg" alt="" loading="lazy">
+      </div>
+    </form>
+  </div>
+</section>
