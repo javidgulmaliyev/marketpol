@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import { Keyboard, Navigation, Pagination, } from "swiper/modules";
 
+/** @type {HTMLDivElement} */
 const rewardsSlider = document.querySelector(".rewards-slider");
 
 if (rewardsSlider) {
