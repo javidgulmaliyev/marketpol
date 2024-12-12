@@ -48,7 +48,9 @@ const scss = {
       .pipe(_.groupCssMediaQueries())
       .pipe(_.gulp.dest(config.path.dest))
       .pipe(_.rename(config.modules.rename))
-      .pipe(_.csso())
+      .pipe(_.csso({
+        restructure: false,
+      }))
       .pipe(_.gulp.dest(config.path.dest));
   },
 };
