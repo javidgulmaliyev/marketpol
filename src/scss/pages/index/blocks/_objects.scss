@@ -5,8 +5,14 @@
 .objects {
   padding-block: functions.responsive-value(80, 40);
 
-  @media (min-width: #{620 + 0.1px}) {
-    background-color: variables.$color-section-background;
+  &:not(&--transparent) {
+    @media (min-width: #{620 + 0.1px}) {
+      background-color: variables.$color-section-background;
+    }
+  }
+
+  // .objects--transparent
+  &--transparent {
   }
 
   // .objects__container
@@ -15,10 +21,12 @@
 
   // .objects__inner
   &__inner {
-    @media (max-width: 620px) {
-      padding-block: 40px;
-      padding-inline: 10px;
-      background-color: variables.$color-section-background;
+    .objects:not(.objects--transparent) & {
+      @media (max-width: 620px) {
+        padding-block: 40px;
+        padding-inline: 10px;
+        background-color: variables.$color-section-background;
+      }
     }
   }
 
