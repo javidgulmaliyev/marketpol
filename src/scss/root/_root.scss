@@ -28,6 +28,8 @@
   --color-fbfaf8: #fbfaf8;
   --color-c6bba7: #c6bba7;
   --color-9b9383: #9b9383;
+  --color-b5a78e: #b5a78e;
+  --color-fdfdfd: #fdfdfd;
 
   --color-white-alpha-60: rgba(255, 255, 255, 0.6);
 
@@ -46,6 +48,8 @@
   --breadcrumbs-active-color: #{variables.$color-9b9383};
   --tab-color: #{variables.$color-999999};
   --tab-active-color: #{variables.$color-1d1d1d};
+  --tag-background-color: #{variables.$color-b5a78e};
+  --tag-color: #{variables.$color-fdfdfd};
 
   --logo-icon-main-color: currentColor;
   --logo-icon-line-color: #{variables.$color-f5b430};
