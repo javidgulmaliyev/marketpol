@@ -1,0 +1,79 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.rewards {
+  padding-block: functions.responsive-value(185, 60) functions.responsive-value(80, 60);
+
+  // .rewards__container
+  &__container {
+  }
+
+  // .rewards__title
+  &__title {
+    margin-block-end: functions.responsive-value(32, 24);
+  }
+
+  // .rewards__slider
+  &__slider {
+  }
+}
+
+.rewards-slider {
+  overflow: visible;
+
+  // .rewards-slider__wrapper
+  &__wrapper {
+  }
+
+  // .rewards-slider__slide
+  &__slide {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    aspect-ratio: 290 / 410;
+    padding: functions.responsive-value(16, 8);
+  }
+
+  // .rewards-slider__image
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    font-size: 0;
+  }
+
+  // .rewards-slider__download
+  &__download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 40px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+    font-size: 0;
+    background-color: variables.$color-arrow-icon;
+    border-radius: 50%;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-arrow-icon;
+      background-color: variables.$color-active;
+    }
+  }
+
+  // .rewards-slider__controllers
+  &__controllers {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+    margin-block-start: functions.responsive-value(32, 16);
+  }
+}

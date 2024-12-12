@@ -1,0 +1,14 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.title-h2 {
+  font-size: functions.responsive-value(28, 26);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (min-width: #{768 + 0.1px}) {
+    color: variables.$color-text;
+  }
+}

@@ -8,6 +8,10 @@
   gap: 24px;
   font-size: 0;
 
+  &:has(.slider-arrows__button--prev.swiper-button-lock):has(.slider-arrows__button--next.swiper-button-lock) {
+    display: none;
+  }
+
   // .slider-arrows--hide
   &--hide {
     @media (max-width: 620px) {
