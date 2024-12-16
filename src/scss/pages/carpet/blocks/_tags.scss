@@ -30,6 +30,7 @@
   min-block-size: functions.responsive-value(48, 40, $start-breakpoint: 330, $end-breakpoint: 280);
   padding-block: 5px;
   padding-inline: functions.responsive-value(24, 16, $start-breakpoint: 330, $end-breakpoint: 280);
+  font-family: variables.$font-secondary;
   font-size: functions.responsive-value(16, 12, $start-breakpoint: 330, $end-breakpoint: 280);
   line-height: 1.2;
   text-align: center;

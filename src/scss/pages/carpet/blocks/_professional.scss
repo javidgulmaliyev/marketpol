@@ -112,6 +112,8 @@
 
   // .professional-list__item
   &__item {
+    font-family: variables.$font-secondary;
+
     &:not(:last-child) {
       margin-block-end: 4px;
     }

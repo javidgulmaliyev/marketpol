@@ -33,6 +33,12 @@
   // .objects__title
   &__title {
     margin-block-end: functions.responsive-value(32, 24);
+
+    br {
+      @media (min-width: #{768 + 0.1px}) {
+        display: none;
+      }
+    }
   }
 
   // .objects__slider

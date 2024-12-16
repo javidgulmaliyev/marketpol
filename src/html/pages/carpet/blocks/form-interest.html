@@ -12,8 +12,9 @@
           <div class="form-inner__input" data-desktop-placeholder="Введите имя: Иванов Иван *" data-mobile-placeholder="Имя *">
             <input id="form-interest-name" name="form-interest-name" type="text" inputmode="text" placeholder="Введите имя" required aria-label="Введите имя">
           </div>
-          <div class="form-inner__input" data-desktop-placeholder="Введите телефон:  +7 (000) 000- 00-00 *" data-mobile-placeholder="Телефон *">
-            <input id="form-interest-tel" name="form-interest-tel" type="tel" inputmode="tel" placeholder="Введите телефон" required aria-label="Введите телефон">
+          <div class="form-inner__input" data-desktop-placeholder="Введите телефон:  +7 (000) 000-00-00 *" data-mobile-placeholder="Телефон *">
+            <input id="form-interest-tel" name="form-interest-tel" type="tel" inputmode="tel" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder="Введите телефон" required data-tel
+              aria-label="Введите телефон">
           </div>
         </div>
         <button class="form-inner__button button" type="submit">

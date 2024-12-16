@@ -73,6 +73,7 @@
   // .form-inner__text
   &__text {
     margin-block-start: 16px;
+    font-family: variables.$font-secondary;
     font-size: functions.responsive-value(18, 16);
     line-height: 1.3;
 
@@ -85,10 +86,6 @@
   // .form-inner__inputs
   &__inputs {
     inline-size: 100%;
-
-    @media (max-width: 768px) {
-      max-inline-size: calc(300 / 355 * 100%);
-    }
   }
 
   // .form-inner__input

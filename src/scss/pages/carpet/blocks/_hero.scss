@@ -183,6 +183,7 @@
 
   // .carpet-quote__text
   &__text {
+    font-family: variables.$font-secondary;
     font-size: functions.responsive-value(24, 14);
     line-height: 1.5;
 

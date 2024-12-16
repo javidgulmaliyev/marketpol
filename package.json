@@ -58,6 +58,7 @@
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "imask": "^7.6.1",
     "require-dir": "^1.2.0",
     "sass": "^1.69.5",
     "style-loader": "^3.3.3",
