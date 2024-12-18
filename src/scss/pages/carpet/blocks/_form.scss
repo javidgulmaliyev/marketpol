@@ -106,6 +106,7 @@
         inset-inline: functions.responsive-value(24, 8);
         display: flex;
         align-items: center;
+        font-family: variables.$font-secondary;
         white-space: nowrap;
         color: variables.$color-a2a2a0;
         text-overflow: clip;
