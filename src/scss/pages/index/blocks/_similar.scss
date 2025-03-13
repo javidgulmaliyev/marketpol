@@ -189,6 +189,27 @@
   // .product-price__value
   &__value {
     text-transform: uppercase;
+
+    &[data-old-price] {
+      position: relative;
+      isolation: isolate;
+      inline-size: fit-content;
+
+      &::after {
+        content: attr(data-old-price);
+        position: absolute;
+        inset-block-start: 1px;
+        inset-inline-start: calc(100% + 4px);
+        z-index: 1;
+        font-family: variables.$font-secondary;
+        font-size: 10px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-decoration: line-through;
+        white-space: nowrap;
+        color: variables.$color-accent;
+      }
+    }
   }
 
   // .product-price__unit
