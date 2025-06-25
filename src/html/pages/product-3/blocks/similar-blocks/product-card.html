@@ -1,0 +1,60 @@
+<article class="similar-slider__slide product-card swiper-slide">
+  <div class="product-card__slider product-card-slider swiper">
+    <a class="product-card-slider__wrapper swiper-wrapper" href="#" aria-label="#">
+      <span class="product-card-slider__slide ibg swiper-slide">
+        <img src="@img/images/pages/product/similar/@@image.jpg" alt="" loading="lazy">
+      </span>
+      <span class="product-card-slider__slide ibg swiper-slide">
+        <img src="@img/images/pages/product/similar/@@image.jpg" alt="" loading="lazy">
+      </span>
+      <span class="product-card-slider__slide ibg swiper-slide">
+        <img src="@img/images/pages/product/similar/@@image.jpg" alt="" loading="lazy">
+      </span>
+      <span class="product-card-slider__slide ibg swiper-slide">
+        <img src="@img/images/pages/product/similar/@@image.jpg" alt="" loading="lazy">
+      </span>
+      <span class="product-card-slider__slide ibg swiper-slide">
+        <img src="@img/images/pages/product/similar/@@image.jpg" alt="" loading="lazy">
+      </span>
+    </a>
+    <span class="product-card-slider__pagination slider-pagination slider-pagination--center"></span>
+  </div>
+  <div class="product-card__header">
+    <p class="product-card__title">
+      <a href="#">@@title</a>
+    </p>
+    <div class="product-id" data-copy-text="Скопировано">
+      <div class="product-id__text">MP-PG-L06</div>
+      <button class="product-id__button" aria-label="Скопировать">
+        <svg width="20" height="20" aria-hidden="true">
+          <use xlink:href="#icon-copy"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="product-card__info">
+    @@if (priceCount === 1) {
+    <div class="product-price">
+      <span class="product-price__label">Цена:</span>
+      <span class="product-price__value" data-old-price="18 060 ₽"><span>16&nbsp;060</span>&#32;₽/<span class="product-price__unit">шт</span></span>
+    </div>
+    }
+    @@if (priceCount === 2) {
+    <div class="product-card__prices">
+      <div class="product-price">
+        <span class="product-price__label">Цена на отрез:</span>
+        <span class="product-price__value" data-old-price="18 060 ₽"><span>16&nbsp;060</span>&#32;₽/<span class="product-price__unit">m²</span></span>
+      </div>
+      <div class="product-price">
+        <span class="product-price__label">Цена от 1 рулона:</span>
+        <span class="product-price__value" data-old-price="18 060 ₽"><span>16&nbsp;060</span>&#32;₽/<span class="product-price__unit">m²</span></span>
+      </div>
+    </div>
+    }
+    <a class="product-card__brand" href="#">Levma Россия</a>
+  </div>
+  <div class="product-card__buttons">
+    <button class="product-card__cart button button--transparent">добавить в корзину</button>
+    <button class="product-card__buy">купить в один клик</button>
+  </div>
+</article>

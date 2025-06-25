@@ -351,6 +351,7 @@
 
 .product-content {
   container-type: inline-size;
+  user-select: none;
 
   > *:last-child {
     margin-block-end: 0;
@@ -648,6 +649,10 @@
     gap: 24px;
     padding: functions.responsive-value(40, 20);
     background-color: variables.$color-accent-2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   // .product-top__text

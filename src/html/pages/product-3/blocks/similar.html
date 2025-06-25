@@ -1,0 +1,10 @@
+<section class="similar" id="section-similar" aria-labelledby="title-similar">
+  <div class="similar__container container">
+    <p class="similar__title h2 h2--ls" id="title-similar">Похожие товары</p>
+    <div class="similar-slider swiper">
+      <div class="similar-slider__wrapper swiper-wrapper">
+        @@loop("similar-blocks/product-card.html", "json/similar-blocks/product-card.json")
+      </div>
+    </div>
+  </div>
+</section>
