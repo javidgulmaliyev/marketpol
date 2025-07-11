@@ -407,6 +407,8 @@
 }
 
 .product-header {
+  user-select: text;
+
   > *:last-child {
     margin-block-end: 0;
   }
