@@ -16,6 +16,8 @@
 }
 
 .similar-slider {
+  user-select: text;
+
   @media (max-width: 550px) {
     overflow: visible;
   }
