@@ -1,0 +1,151 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.catalog {
+  padding-block-end: functions.responsive-value(40, 32);
+
+  // .catalog__container
+  &__container {
+  }
+
+  // .catalog__header
+  &__header {
+    margin-block-end: functions.responsive-value(24, 16);
+  }
+}
+
+.catalog-header {
+  // .catalog-header__title
+  &__title {
+    margin-block-end: 20px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      --h2-line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+      --h2-letter-spacing: 0.02em;
+    }
+  }
+}
+
+.catalog-tabs {
+  // .catalog-tabs__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-block-end: 15.5px;
+    padding-block-end: 9.5px;
+    scrollbar-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @media (max-width: 768px) {
+      margin-inline: -10px;
+      padding-inline: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // .catalog-tabs__buttons-item
+  &__buttons-item {
+  }
+
+  // .catalog-tabs__button
+  &__button {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-decoration: 2px underline rgba($color: #000000, $alpha: 0);
+    text-decoration-skip-ink: none;
+    text-underline-offset: 7.5px;
+    white-space: nowrap;
+    color: variables.$color-breadcrumbs-active;
+
+    &.active {
+      text-decoration-color: currentColor;
+      color: variables.$color-tab-active;
+    }
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: text-decoration-color, color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-tab-active;
+    }
+  }
+
+  // .catalog-tabs__panels
+  &__panels {
+  }
+
+  // .catalog-tabs__panel
+  &__panel {
+  }
+
+  // .catalog-tabs__tags
+  &__tags {
+    @media (max-width: 768px) {
+      margin-inline: -10px;
+    }
+  }
+}
+
+.catalog-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: #{768 + 0.1px}) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    padding-inline: 10px;
+    scrollbar-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // .catalog-tags__item
+  &__item {
+  }
+
+  // .catalog-tags__link
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 36px;
+    padding-block: 5px;
+    padding-inline: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    background-color: variables.$color-accent-2;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      background-color: variables.$color-active-2;
+    }
+  }
+}
