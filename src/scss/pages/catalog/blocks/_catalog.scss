@@ -914,3 +914,45 @@
     color: variables.$color-text;
   }
 }
+
+.count-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  // .count-form__label
+  &__label {
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: variables.$color-tab-active;
+  }
+
+  // .count-form__select
+  &__select {
+    appearance: none;
+    display: block;
+    inline-size: 80px;
+    min-inline-size: auto;
+    padding-block: 0;
+    padding-inline: 16px 40px;
+    block-size: 40px;
+    min-block-size: auto;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    color: #2d3843;
+    background-color: variables.$color-white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%231c1a18' d='M18.2951 9.70498L16.8851 8.29498L12.2951 12.875L7.70507 8.29498L6.29507 9.70498L12.2951 15.705L18.2951 9.70498Z'/%3E%3C/svg%3E%0A");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: 1px solid variables.$color-primary;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
