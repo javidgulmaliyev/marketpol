@@ -20,7 +20,7 @@
   border: 1px solid variables.$color-primary;
   border-radius: 100px;
 
-  &:not(&--transparent) {
+  &:not(&--transparent, &--brown) {
     --outline-color: #{variables.$color-primary};
 
     color: variables.$color-white;
@@ -29,6 +29,20 @@
 
   // .button--transparent
   &--transparent {
+  }
+
+  // .button--brown
+  &--brown {
+    --outline-color: #{variables.$color-primary};
+
+    color: variables.$color-white;
+    background-color: variables.$color-active;
+    border-color: variables.$color-active;
+
+    @include mixins.hover {
+      background-color: variables.$color-primary;
+      border-color: variables.$color-primary;
+    }
   }
 
   @include mixins.prefers-reduced-motion {
@@ -40,6 +54,19 @@
     color: variables.$color-white;
     background-color: variables.$color-active;
     border-color: variables.$color-active;
+  }
+
+  &--brown {
+    --outline-color: #{variables.$color-primary};
+
+    color: variables.$color-white;
+    background-color: variables.$color-active;
+    border-color: variables.$color-active;
+
+    @include mixins.hover {
+      background-color: variables.$color-primary;
+      border-color: variables.$color-primary;
+    }
   }
 
   // .button__text

@@ -35,6 +35,10 @@
   display: flex;
   flex-direction: column;
 
+  // .product-card--catalog
+  &--catalog {
+  }
+
   > *:last-child {
     margin-block-end: 0;
   }
@@ -126,6 +130,10 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    .product-card--catalog & {
+      gap: functions.responsive-value(12, 8);
+    }
   }
 
   // .product-card__cart
@@ -180,6 +188,14 @@
   .product-card__prices & {
     grid-template-columns: subgrid;
     grid-column: span 2;
+  }
+
+  .product-card--catalog & {
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   // .product-price__label
