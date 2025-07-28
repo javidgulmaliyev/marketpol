@@ -718,6 +718,18 @@
   &__list {
     margin-block-end: functions.responsive-value(48, 40);
   }
+
+  // .catalog-products__bottom
+  &__bottom {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .catalog-products__pagination
+  &__pagination {
+    margin-block-end: functions.responsive-value(16, 24);
+  }
 }
 
 .catalog-list {
