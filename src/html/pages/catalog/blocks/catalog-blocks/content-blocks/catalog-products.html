@@ -8,6 +8,51 @@
     @@include("product-blocks/product-card.html", { "image": 6 })
     @@include("product-blocks/product-card.html", { "image": 7 })
     @@include("product-blocks/product-card.html", { "image": 8 })
+    <li class="catalog-list__item catalog-list__item--ads">
+      <div class="ads-card">
+        <div class="ads-card__image ibg">
+          <img src="@img/images/pages/catalog/ads/1.jpg" alt="" loading="lazy">
+        </div>
+        <div class="ads-card__inner">
+          <div class="ads-card__header ads-header">
+            <button class="ads-header__button">реклама</button>
+            <div class="ads-advertiser">
+              <div class="ads-advertiser__top">
+                <div class="ads-advertiser__title">
+                  <span class="ads-advertiser__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-info"></use>
+                    </svg>
+                  </span>
+                  <span class="ads-advertiser__text">Рекламодатель</span>
+                </div>
+                <div class="ads-advertiser__label">000 “КУПИШУЗ“</div>
+              </div>
+              <button class="ads-advertiser__button">
+                <span class="ads-advertiser__icon" aria-hidden="true">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-copy-2"></use>
+                  </svg>
+                </span>
+                <span class="ads-advertiser__text">Скопировать ссылку</span>
+              </button>
+            </div>
+          </div>
+          <div class="ads-content">
+            <p class="ads-content__title">Доставим образцы</p>
+            <p class="ads-content__text">Мы позвоним вам, уточним адрес и необходимые дизайны образцов, которые нужно отправить</p>
+            <button class="button button--transparent">
+              <span class="button__text">Заказать образцы</span>
+              <span class="button__icon" aria-hidden="true">
+                <svg width="16" height="16">
+                  <use xlink:href="#icon-next"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </li>
     @@include("product-blocks/product-card.html", { "image": 1 })
     @@include("product-blocks/product-card.html", { "image": 2 })
     @@include("product-blocks/product-card.html", { "image": 3 })

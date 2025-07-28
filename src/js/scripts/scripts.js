@@ -12,3 +12,4 @@ import "./scripts/counter.js";
 import "./scripts/dialogs.js";
 import "./scripts/carpet-hero-image.js";
 import "./scripts/filter-more.js";
+import "./scripts/ads.js";
