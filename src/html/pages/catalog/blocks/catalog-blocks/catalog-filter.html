@@ -1,0 +1,32 @@
+<aside class="catalog-filter">
+  <div class="filter-header">
+    <div class="filter-header__icon" aria-hidden="true">
+      <svg width="24" height="24">
+        <use xlink:href="#icon-filter"></use>
+      </svg>
+    </div>
+    <h2 class="filter-title">
+      <span class="filter-title__text filter-title__text--desktop">Фильтр подбора товара</span>
+      <span class="filter-title__text filter-title__text--mobile">Фильтр</span>
+    </h2>
+    <button class="filter-header__close" aria-label="Закрыть фильтр">
+      <svg width="24" height="24" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <form class="filter-form" id="form-filter" action="#">
+    <fieldset class="filter-fieldset">
+      <legend class="filter-legend">Цена</legend>
+      <div class="filter-fieldset__prices">
+        <input class="filter-fieldset__input" id="filter-form-price-from" name="filter-form-price-from" type="text" inputmode="numeric" placeholder="от 0 руб." data-prefix="от" data-suffix="руб."
+          aria-label="Цена от">
+        <input class="filter-fieldset__input" id="filter-form-price-to" name="filter-form-price-to" type="text" inputmode="numeric" placeholder="до 1000 руб." data-prefix="до" data-suffix="руб."
+          aria-label="Цена до">
+      </div>
+    </fieldset>
+    <div class="filter-form__spoilers" data-spoilers data-accordion="false">
+      @@loop("filter-blocks/filter-spoiler-item.html", "json/catalog-blocks/filter-form-spoiler-item.json")
+    </div>
+  </form>
+</aside>

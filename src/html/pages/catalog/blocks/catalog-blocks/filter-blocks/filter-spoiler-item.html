@@ -1,0 +1,32 @@
+<fieldset class="filter-fieldset @@if (active) { spoiler-active }">
+  <legend class="filter-fieldset__legend filter-legend">
+    <button class="filter-legend__button" type="button" data-spoiler="button">
+      <span class="filter-legend__label">@@legend</span>
+      <span class="filter-legend__icon" aria-hidden="true">
+        <svg width="24" height="24">
+          <use xlink:href="#icon-down-2"></use>
+        </svg>
+      </span>
+    </button>
+  </legend>
+  <div class="filter-fieldset__region" data-spoiler="region">
+    <div class="filter-fieldset__inner">
+      <div class="filter-checkboxes">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-1" name="filter-checkbox-@@id-1" type="checkbox" value="#" aria-label="Item text">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-2" name="filter-checkbox-@@id-2" type="checkbox" value="#" aria-label="Item text">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-3" name="filter-checkbox-@@id-3" type="checkbox" value="#" aria-label="Item text">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-4" name="filter-checkbox-@@id-4" type="checkbox" value="#" aria-label="Item text">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-5" name="filter-checkbox-@@id-5" type="checkbox" value="#" aria-label="Item text">
+        <input class="filter-checkbox" id="filter-checkbox-@@id-6" name="filter-checkbox-@@id-6" type="checkbox" value="#" aria-label="Item text">
+      </div>
+      <button class="filter-more" type="button" data-show-text="Показать еще" data-hide-text="Скрыть">
+        <span class="filter-more__text">Показать ещё</span>
+        <span class="filter-more__icon" aria-hidden="true">
+          <svg width="24" height="24">
+            <use xlink:href="#icon-down-2"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</fieldset>

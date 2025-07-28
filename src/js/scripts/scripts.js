@@ -11,3 +11,4 @@ import "./scripts/tabs.js";
 import "./scripts/counter.js";
 import "./scripts/dialogs.js";
 import "./scripts/carpet-hero-image.js";
+import "./scripts/filter-more.js";

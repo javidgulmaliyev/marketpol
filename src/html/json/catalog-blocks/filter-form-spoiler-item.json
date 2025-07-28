@@ -1,0 +1,57 @@
+[
+  {
+    "active": false,
+    "legend": "Основа",
+    "id": "warp"
+  },
+  {
+    "active": true,
+    "legend": "Назначение",
+    "id": "appointment"
+  },
+  {
+    "active": true,
+    "legend": "Бренд",
+    "id": "brand"
+  },
+  {
+    "active": true,
+    "legend": "Коллекция",
+    "id": "collection"
+  },
+  {
+    "active": true,
+    "legend": "Класс пожаробезопасности",
+    "id": "fire-safety-class"
+  },
+  {
+    "active": true,
+    "legend": "Тип ворса",
+    "id": "pile-type"
+  },
+  {
+    "active": true,
+    "legend": "Высота ворса",
+    "id": "pile-height"
+  },
+  {
+    "active": true,
+    "legend": "Длина рулона",
+    "id": "roll-length"
+  },
+  {
+    "active": true,
+    "legend": "Цвет декора",
+    "id": "decor-color"
+  },
+  {
+    "active": true,
+    "legend": "Соединение",
+    "id": "connection"
+  },
+  {
+    "active": true,
+    "legend": "Способ изготовления",
+    "id": "manufacturing-method"
+  }
+]
