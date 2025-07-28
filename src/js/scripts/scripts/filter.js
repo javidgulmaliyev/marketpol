@@ -1,11 +1,18 @@
+const filter = document.querySelector(".catalog-filter");
 const filterButton = document.querySelector(".filter-button");
 
-if (filterButton) {
-  const filter = document.querySelector(".catalog-filter");
+if (filter && filterButton) {
+  const filterCloseButton = filter.querySelector(".filter-header__close");
 
   filterButton.addEventListener("click", () => {
     filter.classList.toggle("catalog-filter--active");
   });
+
+  if (filterCloseButton) {
+    filterCloseButton.addEventListener("click", () => {
+      filter.classList.remove("catalog-filter--active");
+    });
+  }
 
   document.addEventListener("click", (event) => {
     /** @type {{target: HTMLElement}} */
