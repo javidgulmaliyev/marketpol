@@ -102,9 +102,12 @@
   // .product-card__prices
   &__prices {
     display: grid;
-    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 4px;
+
+    .product-card:not(.product-card--catalog) & {
+      grid-template-columns: auto 1fr;
+    }
   }
 
   // .product-card__brand
@@ -185,17 +188,15 @@
   gap: 4px;
   line-height: 1.2;
 
-  .product-card__prices & {
+  .product-card:not(.product-card--catalog) .product-card__prices & {
     grid-template-columns: subgrid;
     grid-column: span 2;
   }
 
   .product-card--catalog & {
-    @media (max-width: 992px) {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   // .product-price__label

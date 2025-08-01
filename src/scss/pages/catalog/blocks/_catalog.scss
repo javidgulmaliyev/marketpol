@@ -167,7 +167,6 @@
     inset-inline-start: 0;
     z-index: 150;
     inline-size: 100%;
-    max-inline-size: 375px;
     padding-inline: 10px;
     background-color: variables.$color-white;
     scrollbar-width: none;
@@ -181,6 +180,10 @@
     @include mixins.prefers-reduced-motion {
       transition-property: transform;
       transition-duration: 0.3s;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      max-inline-size: 375px;
     }
 
     &::-webkit-scrollbar {
@@ -1045,6 +1048,7 @@
   // .ads-content__text
   &__text {
     margin-block-end: functions.responsive-value(23, 16);
+    font-family: variables.$font-secondary;
     font-size: 14px;
     line-height: 1.5;
     color: variables.$color-text;
