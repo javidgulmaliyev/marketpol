@@ -767,17 +767,6 @@
     font-size: 0;
     text-align: center;
 
-    .search-form__input:invalid ~ & {
-      color: variables.$color-9b9383;
-      visibility: hidden;
-      pointer-events: none;
-      user-select: none;
-
-      svg {
-        visibility: visible;
-      }
-    }
-
     @include header-main-hover;
   }
 }
