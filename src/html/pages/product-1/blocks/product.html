@@ -200,14 +200,14 @@
         <div class="product-content__header">
           <div class="product-header">
             <div class="product-header__title" aria-hidden="true">Ковролин офисный levma, коллекция start, Blue</div>
-            <div class="product-header__id product-id" data-copy-text="Скопировано">
+            <product-id class="product-header__id product-id" data-copy-text="Скопировано">
               <div class="product-id__text">MP-PG-L06</div>
               <button class="product-id__button" aria-label="Скопировать">
                 <svg width="20" height="20" aria-hidden="true">
                   <use xlink:href="#icon-copy"></use>
                 </svg>
               </button>
-            </div>
+            </product-id>
           </div>
         </div>
         <div class="product-content__item product-purposes">
@@ -482,7 +482,9 @@
                 </div>
               </div>
               <div class="product-form__buttons">
-                <button class="product-form__button button button--transparent" type="button" data-dialog-id="dialog-buy">купить в один клик</button>
+                <dialog-button>
+                  <button class="product-form__button button button--transparent" type="button" data-dialog-id="dialog-buy">купить в один клик</button>
+                </dialog-button>
                 <button class="product-form__button button" type="submit">добавить в корзину</button>
               </div>
             </div>

@@ -61,7 +61,7 @@ if (sortOpenButton && select && customSelect) {
 
       button.addEventListener('click', () => {
         select.value = value;
-        select.dispatchEvent(new Event('change'));
+        select.dispatchEvent(new Event('change'), { bubbles: true });
         sortOpenButton.classList.remove('actions-form__button--active');
       });
     });

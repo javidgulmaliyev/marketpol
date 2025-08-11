@@ -1,6 +1,6 @@
 <li class="catalog-list__item">
   <article class="product-card product-card--catalog">
-    <div class="product-card__slider product-card-slider swiper">
+    <product-images class="product-card__slider product-card-slider swiper">
       <a class="product-card-slider__wrapper swiper-wrapper" href="#" aria-label="#">
         <span class="product-card-slider__slide ibg swiper-slide">
           <img src="@img/images/pages/catalog/products/@@image.jpg" alt="" loading="lazy">
@@ -19,19 +19,19 @@
         </span>
       </a>
       <span class="product-card-slider__pagination slider-pagination slider-pagination--center"></span>
-    </div>
+    </product-images>
     <div class="product-card__header">
       <p class="product-card__title">
         <a href="#">Ковролин офисный levma, коллекция start, Blue</a>
       </p>
-      <div class="product-id" data-copy-text="Скопировано">
+      <product-id class="product-id" data-copy-text="Скопировано">
         <div class="product-id__text">MP-PG-L06</div>
         <button class="product-id__button" aria-label="Скопировать">
           <svg width="20" height="20" aria-hidden="true">
             <use xlink:href="#icon-copy"></use>
           </svg>
         </button>
-      </div>
+      </product-id>
     </div>
     <div class="product-card__info">
       <div class="product-card__prices">
@@ -48,7 +48,9 @@
     </div>
     <div class="product-card__buttons">
       <button class="product-card__cart button button--brown">купить</button>
-      <button class="product-card__buy">купить в один клик</button>
+      <dialog-button>
+        <button class="product-card__buy" data-dialog-id="dialog-buy">купить в один клик</button>
+      </dialog-button>
     </div>
   </article>
 </li>

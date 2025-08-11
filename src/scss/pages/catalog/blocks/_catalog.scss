@@ -421,7 +421,6 @@
 }
 
 .filter-checkbox {
-  appearance: none;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -429,23 +428,12 @@
   font-family: variables.$font-secondary;
   font-size: 14px;
   line-height: 1.3;
-  cursor: pointer;
 
   .filter-checkboxes:not(:has(+ .filter-more--active)) &:nth-child(n + 4) {
     display: none;
   }
 
-  &:checked {
-    &::before {
-      background-color: variables.$color-active-2;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 10'%3E%3Cpath fill='%23fff' d='M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z'/%3E%3C/svg%3E%0A");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 12px 10px;
-    }
-  }
-
-  &:focus-visible {
+  &:has(.filter-checkbox__input:focus-visible) {
     outline: 2px solid;
     outline-offset: 2px;
   }
@@ -460,13 +448,22 @@
     outline: none;
   }
 
-  &::before {
-    content: "";
+  // .filter-checkbox__input
+  &__input {
+    appearance: none;
     flex: 0 0 auto;
     inline-size: 18px;
     aspect-ratio: 1 / 1;
     font-size: 0;
     background-color: variables.$color-accent-2;
+
+    &:checked {
+      background-color: variables.$color-active-2;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 10'%3E%3Cpath fill='%23fff' d='M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px 10px;
+    }
 
     @include mixins.prefers-reduced-motion {
       transition-property: background-color;
@@ -474,8 +471,8 @@
     }
   }
 
-  &::after {
-    content: attr(aria-label);
+  // .filter-checkbox__text
+  &__text {
   }
 }
 
@@ -553,15 +550,6 @@
   // .catalog-actions__form
   &__form {
     margin-inline-start: auto;
-  }
-
-  // .catalog-actions__selected
-  &__selected {
-    margin-block-start: 16px;
-
-    @media (max-width: 992px) {
-      margin-inline: -10px;
-    }
   }
 }
 
@@ -788,19 +776,18 @@
   }
 }
 
-.filter-selected {
+.tagList {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  margin-block-start: 16px;
   scrollbar-width: none;
   overflow-x: auto;
   overflow-y: hidden;
 
-  @media (min-width: #{992 + 0.1px}) {
-    display: none;
-  }
-
   @media (max-width: 992px) {
+    margin-inline: -10px;
     padding-inline: 10px;
   }
 
@@ -808,18 +795,72 @@
     display: none;
   }
 
-  // .filter-selected__item
-  &__item {
-    position: relative;
-    isolation: isolate;
+  > :is(div) {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+
+    .active_filter_item {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      min-block-size: 36px;
+      padding-block: 5px;
+      padding-inline: 12px;
+      font-size: 12px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid;
+      border-radius: 100px;
+
+      @include mixins.prefers-reduced-motion {
+        transition-property: color;
+        transition-duration: 0.3s;
+      }
+
+      @include mixins.hover {
+        color: variables.$color-active-2;
+      }
+
+      .tagName {
+      }
+
+      .tagItem {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .tagRemove {
+          flex: 0 0 auto;
+          font-size: 0;
+
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 100px;
+          }
+        }
+      }
+
+      .mse2_selected_link {
+      }
+    }
+  }
+
+  .clear_total {
+    position: sticky;
+    inset-inline-start: 0;
     display: flex;
     align-items: center;
-    gap: 4px;
     min-block-size: 36px;
     padding-block: 5px;
     padding-inline: 12px;
     font-size: 12px;
     text-transform: uppercase;
+    text-align: center;
     white-space: nowrap;
     border: 1px solid;
     border-radius: 100px;
@@ -831,23 +872,6 @@
 
     @include mixins.hover {
       color: variables.$color-active-2;
-    }
-  }
-
-  // .filter-selected__text
-  &__text {
-  }
-
-  // .filter-selected__remove
-  &__remove {
-    flex: 0 0 auto;
-    font-size: 0;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 100px;
     }
   }
 }
@@ -962,7 +986,7 @@
     0 8px 8px -4px rgba(16, 24, 40, 0.03),
     0 20px 24px -4px rgba(16, 24, 40, 0.08);
 
-  .ads-header__button:not(.ads-header__button--active) + & {
+  .ads-header:not(:has(.ads-header__button--active)) & {
     visibility: hidden;
     opacity: 0;
   }

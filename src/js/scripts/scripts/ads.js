@@ -1,24 +1,48 @@
-const adsButton = document.querySelector('.ads-header__button');
+class AdsButton extends HTMLElement {
+  /** @type {HTMLButtonElement} */
+  button;
+  /** @type {AbortController} */
+  abortController;
 
-if (adsButton) {
-  adsButton.addEventListener('click', () => {
-    adsButton.classList.toggle('ads-header__button--active');
-  });
+  constructor() {
+    super();
+  }
 
-  document.addEventListener('click', (event) => {
-    /** @type {{target: HTMLElement}} */
-    const { target } = event;
+  connectedCallback() {
+    this.button = this.querySelector('.ads-header__button');
 
-    if (!target.closest('.ads-header__button') && !target.closest('.ads-advertiser')) {
-      adsButton.classList.remove('ads-header__button--active');
+    if (this.button) {
+      this.abortController = new AbortController();
+
+      this.button.addEventListener('click', () => {
+        this.button.classList.toggle('ads-header__button--active');
+      }, { signal: this.abortController.signal });
+
+      document.addEventListener('click', (event) => {
+        /** @type {{target: HTMLElement}} */
+        const { target } = event;
+
+        if (!target.closest('.ads-header__button') && !target.closest('.ads-advertiser')) {
+          this.button.classList.remove('ads-header__button--active');
+        }
+      }, { signal: this.abortController.signal });
+
+      document.addEventListener('keydown', (event) => {
+        const { key } = event;
+
+        if (key === 'Escape') {
+          this.button.classList.remove('ads-header__button--active');
+        }
+      }, { signal: this.abortController.signal });
     }
-  });
+  }
 
-  document.addEventListener('keydown', (event) => {
-    const { key } = event;
+  disconnectedCallback() {
+    this.abortController?.abort();
 
-    if (key === 'Escape') {
-      adsButton.classList.remove('ads-header__button--active');
-    }
-  });
+    this.button = undefined;
+    this.abortController = undefined;
+  }
 }
+
+customElements.define('ads-button', AdsButton);
