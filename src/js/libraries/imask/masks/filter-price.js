@@ -12,7 +12,7 @@ priceInputs.forEach((priceInput) => {
     mask: `${prefix} PRICE ${suffix}`,
     blocks: {
       PRICE: {
-        mask: /^[1-9]\d*$/,
+        mask: /^(0|[1-9]\d*)$/,
       },
     },
   });
