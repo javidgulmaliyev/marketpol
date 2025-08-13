@@ -11,6 +11,7 @@ import "./scripts/tabs.js";
 import "./scripts/counter.js";
 import "./scripts/dialogs.js";
 import "./scripts/carpet-hero-image.js";
+import "./scripts/price-inputs.js";
 import "./scripts/filter-more.js";
 import "./scripts/filter.js";
 import "./scripts/filter-form.js";

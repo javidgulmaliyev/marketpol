@@ -19,10 +19,12 @@
     <fieldset class="filter-fieldset">
       <legend class="filter-legend">Цена</legend>
       <div class="filter-fieldset__prices">
-        <input id="filter-form-price-from" name="filter-form-price-from" type="hidden">
-        <input class="filter-fieldset__input" type="text" inputmode="numeric" placeholder="от 0 руб." data-prefix="от" data-suffix="руб." aria-label="Цена от">
-        <input id="filter-form-price-to" name="filter-form-price-to" type="hidden">
-        <input class="filter-fieldset__input" type="text" inputmode="numeric" placeholder="до 1000 руб." data-prefix="до" data-suffix="руб." aria-label="Цена до">
+        <div class="filter-fieldset__price" data-placeholder="от 0 руб." data-prefix="от" data-suffix="руб." data-price="empty">
+          <input class="filter-fieldset__input" id="filter-form-price-from" name="filter-form-price-from" type="number" inputmode="numeric" aria-label="Цена от">
+        </div>
+        <div class="filter-fieldset__price" data-placeholder="до 1000 руб." data-prefix="до" data-suffix="руб." data-price="empty">
+          <input class="filter-fieldset__input" id="filter-form-price-to" name="filter-form-price-to" type="number" inputmode="numeric" aria-label="Цена до">
+        </div>
       </div>
     </fieldset>
     <div class="filter-form__spoilers" data-spoilers data-accordion="false">
