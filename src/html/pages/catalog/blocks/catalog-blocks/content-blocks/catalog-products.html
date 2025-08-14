@@ -8,41 +8,44 @@
     @@include("product-blocks/product-card.html", { "image": 6 })
     @@include("product-blocks/product-card.html", { "image": 7 })
     @@include("product-blocks/product-card.html", { "image": 8 })
-    <li class="catalog-list__item catalog-list__item--ads">
-      <div class="ads-card">
-        <div class="ads-card__image ibg">
+    <li class="catalog-list__item catalog-list__item--examples">
+      <div class="examples-card">
+        <div class="examples-card__image ibg">
           <img src="@img/images/pages/catalog/ads/1.jpg" alt="" loading="lazy">
         </div>
-        <div class="ads-card__inner">
-          <div class="ads-card__header ads-header">
-            <ads-button>
-              <button class="ads-header__button">реклама</button>
-            </ads-button>
-            <div class="ads-advertiser">
-              <div class="ads-advertiser__top">
-                <div class="ads-advertiser__title">
-                  <span class="ads-advertiser__icon" aria-hidden="true">
+        <div class="examples-card__inner">
+          <div class="examples-card__header examples-header">
+            <examples-button>
+              <button class="examples-header__button">реклама</button>
+            </examples-button>
+            <div class="examples-advertiser">
+              <div class="examples-advertiser__top">
+                <div class="examples-advertiser__title">
+                  <span class="examples-advertiser__icon" aria-hidden="true">
                     <svg width="24" height="24">
                       <use xlink:href="#icon-info"></use>
                     </svg>
                   </span>
-                  <span class="ads-advertiser__text">Рекламодатель</span>
+                  <span class="examples-advertiser__text">Рекламодатель</span>
                 </div>
-                <div class="ads-advertiser__label">000 “КУПИШУЗ“</div>
+                <div class="examples-advertiser__label">000 “КУПИШУЗ“</div>
               </div>
-              <button class="ads-advertiser__button">
-                <span class="ads-advertiser__icon" aria-hidden="true">
-                  <svg width="24" height="24">
-                    <use xlink:href="#icon-copy-2"></use>
-                  </svg>
-                </span>
-                <span class="ads-advertiser__text">Скопировать ссылку</span>
-              </button>
+              <copy-button>
+                <button class="examples-advertiser__button">
+                  <span class="examples-advertiser__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-copy-2"></use>
+                    </svg>
+                  </span>
+                  <span class="examples-advertiser__text" data-success="Ссылка скопирована">Скопировать ссылку</span>
+                </button>
+                <span data-copy hidden>https://javidgulmaliyev.github.io/marketpol/catalog.html</span>
+              </copy-button>
             </div>
           </div>
-          <div class="ads-content">
-            <p class="ads-content__title">Доставим образцы</p>
-            <p class="ads-content__text">Мы позвоним вам, уточним адрес и необходимые дизайны образцов, которые нужно отправить</p>
+          <div class="examples-content">
+            <p class="examples-content__title">Доставим образцы</p>
+            <p class="examples-content__text">Мы позвоним вам, уточним адрес и необходимые дизайны образцов, которые нужно отправить</p>
             <button class="button button--transparent">
               <span class="button__text">Заказать образцы</span>
               <span class="button__icon" aria-hidden="true">

@@ -1,4 +1,4 @@
-class AdsButton extends HTMLElement {
+class ExamplesButton extends HTMLElement {
   /** @type {HTMLButtonElement} */
   button;
   /** @type {AbortController} */
@@ -9,21 +9,21 @@ class AdsButton extends HTMLElement {
   }
 
   connectedCallback() {
-    this.button = this.querySelector('.ads-header__button');
+    this.button = this.querySelector('.examples-header__button');
 
     if (this.button) {
       this.abortController = new AbortController();
 
       this.button.addEventListener('click', () => {
-        this.button.classList.toggle('ads-header__button--active');
+        this.button.classList.toggle('examples-header__button--active');
       }, { signal: this.abortController.signal });
 
       document.addEventListener('click', (event) => {
         /** @type {{target: HTMLElement}} */
         const { target } = event;
 
-        if (!target.closest('.ads-header__button') && !target.closest('.ads-advertiser')) {
-          this.button.classList.remove('ads-header__button--active');
+        if (!target.closest('.examples-header__button') && !target.closest('.examples-advertiser')) {
+          this.button.classList.remove('examples-header__button--active');
         }
       }, { signal: this.abortController.signal });
 
@@ -31,7 +31,7 @@ class AdsButton extends HTMLElement {
         const { key } = event;
 
         if (key === 'Escape') {
-          this.button.classList.remove('ads-header__button--active');
+          this.button.classList.remove('examples-header__button--active');
         }
       }, { signal: this.abortController.signal });
     }
@@ -45,4 +45,4 @@ class AdsButton extends HTMLElement {
   }
 }
 
-customElements.define('ads-button', AdsButton);
+customElements.define('examples-button', ExamplesButton);

@@ -17,3 +17,4 @@ import "./scripts/filter.js";
 import "./scripts/filter-form.js";
 import "./scripts/sort-form.js";
 import "./scripts/ads.js";
+import "./scripts/copy-button.js";
